@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dreamview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    function initLoadJSON(update) {
+      const defaultConfig = {
+        label: 'default',
+        value: 'parameters.json'
+      };
+      const parameters_url = localStorage.getItem('PARAMETERS_URL');
+      const parameters_obj = parameters_url ? JSON.parse(parameters_url) : defaultConfig;
+      try {
+        loadJSON(parameters_obj.value, (response) => {
+          if (!response) {
+            loadJSON('parameters.json', (response) => {
+              window.PARAMETERS = JSON.parse(response);
+            });
+            update && window.updateRoot();
+          } else {
+            window.PARAMETERS = JSON.parse(response);
+            update && window.updateRoot();
+          }
+        });
+      } catch(e) {
+        console.log('e = ', e);
+      }
+    }
+      function loadJSON(jsonFilePath, callback) {
+        console.log("Loading Json file:", jsonFilePath);
+        const xobj = new XMLHttpRequest();
+        xobj.overrideMimeType('application/json');
+        xobj.open('GET', jsonFilePath + '?t=' + new Date().getTime(), false /* synchronous */);
+        xobj.onreadystatechange = () => {
+          if (xobj.readyState === 4 && xobj.status === 200) {
+            // Required use of an anonymous callback as .open will NOT
+            // return a value but simply returns undefined in asynchronous mode
+            callback(xobj.responseText);
+          } else {
+            callback(null);
+          }
+        };
+        xobj.send(null);
+      }
+
+    initLoadJSON()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

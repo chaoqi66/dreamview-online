@@ -1,0 +1,49 @@
+{
+  "nested": {
+    "apollo": {
+      "nested": {
+        "history_localization": {
+          "nested": {
+            "Vec2D": {
+              "fields": {
+                "x": {
+                  "type": "double",
+                  "id": 1
+                },
+                "y": {
+                  "type": "double",
+                  "id": 2
+                }
+              }
+            },
+            "CarPoseList": {
+              "fields": {
+                "carPose": {
+                  "rule": "repeated",
+                  "type": "Vec2D",
+                  "id": 1
+                }
+              }
+            },
+            "CarCoordinate": {
+              "fields": {
+                "carCoordinate": {
+                  "type": "CarPoseList",
+                  "id": 1
+                }
+              }
+            },
+            "CarPose": {
+              "fields": {
+                "carCoordinate": {
+                  "type": "CarCoordinate",
+                  "id": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

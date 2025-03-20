@@ -1,0 +1,70 @@
+speedGraph:
+    options:
+        legend:
+            display: true
+        axes:
+            x:
+                labelString: ''
+                hidden: true
+                maxTicksLimit: 20
+                stepSize: 1
+            y:
+                min: 0.0
+                max: 20.0
+                stepSize: 5
+                labelString: 'speed (m/s)'
+    properties:
+        lines:
+            real:
+                color: 'rgba(0, 106, 255, 1)' # blue
+                borderWidth: 2
+                pointRadius: 0
+                fill: false
+                showLine: ture
+            plan:
+                color: 'rgba(1, 209, 193, 0.65)' # green
+                borderWidth: 2
+                pointRadius: 0
+                fill: false
+                showLine: ture
+            target:
+                color: 'rgba(180, 255, 180, 0.7)' # light green
+                borderWidth: 3
+                pointRadius: 0
+                fill: false
+                showLine: true
+accelerationGraph:
+    options:
+        legend:
+            display: true
+        axes:
+            x:
+                labelString: ''
+                hidden: true
+                maxTicksLimit: 20
+                stepSize: 1
+            y:
+                min: -4.0
+                max: 4.0
+                stepSize: 1
+                labelString: 'acc (m/s^2)'
+    properties:
+        lines:
+            real:
+                color: 'rgba(0, 106, 255, 1)' # blue
+                borderWidth: 2
+                pointRadius: 0
+                fill: false
+                showLine: ture
+            plan:
+                color: 'rgba(1, 209, 193, 0.65)' # green
+                borderWidth: 2
+                pointRadius: 0
+                fill: false
+                showLine: ture
+            target:
+                color: 'rgba(180, 255, 180, 0.7)' # light green
+                borderWidth: 3
+                pointRadius: 0
+                fill: false
+                showLine: true

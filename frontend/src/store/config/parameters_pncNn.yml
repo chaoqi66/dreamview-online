@@ -1,0 +1,710 @@
+camera:
+  viewAngle: 0.80   # rad
+  Default:
+    fov: 60 # deg
+    near: 1
+    far: 300
+  Near:
+    fov: 60
+    near: 1
+    far: 200
+  Overhead:
+    fov: 60
+    near: 1
+    far: 4000
+  Map:
+    fov: 70
+    near: 1
+    far: 4000
+  CameraView:
+    fov: 30.5
+    near: 1
+    far: 1500
+  Orthographic:
+    fov: 70
+    near: 1
+    far: 4000
+  laneWidth: 4.5 # original 3.32
+  laneWidthToViewDistanceRatio: 5
+ground:
+  defaults:
+    mpp: 0.125
+    xres: 8192
+    yres: 8192
+    xorigin: 4096
+    yorigin: 4096
+    type: default # default or tile
+    tileRange: 4
+  sunnyvale_big_loop:
+    mpp: 0.125
+    xres: 24576
+    yres: 16384
+    xorigin: 587392
+    yorigin: 4140800
+    type: default # default or tile
+    tileRange: 4
+planning:
+  # The minimum interval between two consecutive
+  minInterval: 0.1
+  defaults:
+    width: 1.4
+  pathProperties:
+    default:
+      width: 0.1
+      color: 0x616ee5
+      opacity: 1
+      zOffset: 1.4
+    trajectory:
+      width: 0.2
+      color: 0x0000FF
+      opacity: 0.7
+      zOffset: 2.0
+    origin_reference_lane:
+      width: 1.2
+      color: 0x789fca
+      opacity: 0.3
+      zOffset: 1.1
+    target_reference_lane:
+      width: 1.2
+      color: 0x9d9b9b
+      opacity: 0.3
+      zOffset: 1.1
+    planning_reference_line_0:
+      width: 1.2
+      color: 0x789fca
+      opacity: 0.3
+      zOffset: 1.1
+    planning_reference_line_1:
+      width: 1.2
+      color: 0x9d9b9b
+      opacity: 0.3
+      zOffset: 1.1
+    planning_reference_line_2:
+      width: 1.2
+      color: 0x9d9b9b
+      opacity: 0.3
+      zOffset: 1.1
+    planning_reference_line_3:
+      width: 1.2
+      color: 0x9d9b9b
+      opacity: 0.3
+      zOffset: 1.1
+    planning_reference_line_4:
+      width: 1.2
+      color: 0x9d9b9b
+      opacity: 0.3
+      zOffset: 1.1
+    planning_reference_line_5:
+      width: 1.2
+      color: 0x9d9b9b
+      opacity: 0.3
+      zOffset: 1.1
+    left_reference_line_gap:
+      width: 1.2
+      color: 0xb7b7a6
+      opacity: 0.3
+      zOffset: 1.2
+    right_reference_line_gap:
+      width: 1.2
+      color: 0xb7b7a6
+      opacity: 0.3
+      zOffset: 1.2
+    DpPolyPathOptimizer:
+      width: 0.4
+      color: 0x8DFCB4
+      opacity: 0.8
+      zOffset: 1.2
+    PIECEWISE_JERK_PATH_OPTIMIZER:
+      width: 0.2
+      color: 0x36A2EB
+      opacity: 1
+      zOffset: 1.3
+    planning_path_boundary_1:
+      style: dash
+      width: 0.1
+      color: 0xF0FF00
+      opacity: 1
+      zOffset: 1.3
+    planning_path_boundary_2:
+      style: dash
+      width: 0.1
+      color: 0xF0FF00
+      opacity: 1
+      zOffset: 1.3
+    Planning PathData:
+      width: 1.2
+      color: 0x429b94
+      opacity: 0.4
+      zOffset: 1.8
+    ILQR_PATH_OPTIMIZER:
+      width: 1.35
+      color: 0x429b94
+      opacity: 0.6
+      zOffset: 1.8
+
+options:
+  # side bar options
+  showTasks:
+    default: true
+  showModuleController:
+    default: false
+  showMenu:
+    default: false
+  showRouteEditingBar:
+    default: false
+  showPOI:
+    default: false
+  showDataRecorder:
+    default: false
+  showProfile:
+    default: false
+
+  # task panel options
+  showPNCMonitor:
+    default: true
+    menuId: showPNCMonitor
+  showPncNnCanvas:
+    menuId: showPncNnCanvas
+    default: true
+  showPredictionMonitor:
+    default: false
+    menuId: showPredictionMonitor
+  showEfficientLaneMonitor:
+    default: false
+    menuId: showEfficientLaneMonitor
+  showVirtualCloseLoop:
+    default: false
+  showCloseLoop:
+    default: false
+  showDataCollectionMonitor:
+    default: false
+  showFuelClient:
+    default: false
+  enableSimControl:
+    default: false
+  lockTaskPanel:
+    default: false
+  showVideo:
+    default: true
+  showVideo2:
+    default: false
+  showVideo3:
+    default: false
+  showVideo4:
+    default: false
+  showVideo5:
+    default: false
+  showVideo6:
+    default: false
+  showVideo7:
+    default: false
+  showModuleDelay:
+    default: false
+  showSimpleMonitor:
+    default: false
+  showMessageSize:
+    default: false
+  showSpeedAcc:
+    default: false
+  showAngleDense:
+    default: false
+  showDeltaTime:
+    default: true
+  showTimeInterval:
+    default: false
+  showControlPanel:
+    default: true
+  showBevRight:
+    default: true
+  showPredictionObject:
+    default: true
+  showPerceptionObject:
+    default: false
+  showPncObject:
+    default: false
+  showPolygon:
+    default: false
+    menuId: showPolygon
+  showFollowCar:
+    default: true
+  showFrameRate:
+    default: false
+  showRangeView:
+    default: false
+  showHighMap:
+    default: false
+  showMapShoulder:
+    default: true
+  showTopoTree:
+    default: false
+    menuId: showTopoTree
+  showRwText:
+    default: false
+    menuId: showRwText
+  showRoadStructurePerception:
+    default: false
+  showRdStucPerceptionLane:
+    default: true
+  showRdStucPerceptionLaneId:
+    default: true
+  showSuccessorId:
+    default: false
+  showRdPerMultiLane:
+    default: false
+  showFaultReport:
+    default: false
+  showRdMultiLane:
+    default: false
+  showRdStucPerceptionStopLine:
+    default: true
+  showRdStucPerceptionIntersection:
+    default: true
+  showRdStucPerceptionCrosswalk:
+    default: true 
+  showRoadStructure:
+    default: true
+  showVectorizedLane:
+    default: false
+  showLaneId:
+    default: false
+  showLaneMap:
+    default: false
+  showPncPre:
+    default: false
+  showPredictionPath:
+    default: false
+    menuId: showPredictionPath
+  showCurbSet:
+    default: false
+  showNaviTwoKm:
+    default: true
+  showNaviSDTwoKm:
+    default: true
+  showGdMap:
+    default: false
+  showBehaviorMap:
+    default: false
+  showDimensionalCar:
+    default: false
+    menuId: showDimensionalCar
+  showTurningline:
+    default: false
+  showUniversalObstacles:
+    default: true
+  showDistance:
+    default: false
+  showAutoCarHistory:
+    default: false
+  hideText:
+    default: false
+  showRoadNet:
+    default: false
+  showRoadNetCurb:
+    default: true
+  showRoadNetLane:
+    default: true
+  showRoadNetStopLine:
+    default: true
+  showRoadNetFreeSpace:
+    default: true
+  showRoadNetIntersection:
+    default: true
+  showRoadNetCrosswalk:
+    default: true
+  showRoadNetNnPath:
+    default: false
+  showRoadNetProposals:
+    default: false
+  showNnPathSwitch:
+    default: false
+  showObstacleBarrier:
+    default: false
+    menuId: showObstacleBarrier
+  showWorldBarrier:
+    default: true
+
+  # teleop
+  showConsoleTeleopMonitor:
+      default: false
+  showCarTeleopMonitor:
+      default: false
+
+  # layer Menu options
+  cameraAngle:
+    default: Orthographic
+    hasCameraView: false
+  showDecisionMain:
+    default: true
+    menuId: decisionMain
+  showDecisionObstacle:
+    default: true
+    menuId: decisionObstacle
+  showPlanningTrajectory:
+    default: true
+    menuId: planningTrajectory
+  showPlanningCar:
+    default: false
+    menuId: planningCar
+  showPlanningPath:
+    default: true
+    menuId: planningPath
+  showPlanningEgoPath:
+    default: true
+    menuId: planningEgoPath
+  showPlanningRSSInfo:
+    default: false
+    menuId: rssInfo
+  showPlanningMultiPolicy:
+    default: false
+    menuId: multiPolicy
+  showPlanningEgoPathPoint:
+    default: false
+    menuId: egoPathPoint
+  showRouting:
+    default: false
+    menuId: routing
+  showPredictionMajor:
+    default: true
+    menuId: predictionMajor
+  showVehicleFlowLines:
+    default: false
+    menuId: vehicleFlowLines
+  showEfficientLane:
+    default: false
+    menuId: efficientLane
+  showNnPath:
+    default: false
+    menuId: nnPath
+  showNnPathLow:
+    default: false
+    menuId: nnPathLow
+  showGlobalAction:
+    default: false
+    menuId: globalAction
+  showEfficientNavi:
+    default: true
+    menuId: efficientNavi
+  showTurnType:
+    default: false
+    menuId: showTurnType
+  showLowProb:
+    default: true
+    menuId: showLowProb
+  showLowProbColor:
+    default: false
+    menuId: showLowProbColor
+  showCurbTag:
+    default: true
+    menuId: curbTag
+  showRoadStructureCurb:
+    default: false
+    menuId: roadStructureCurb
+  showPdLane:
+    default: true
+  showVisibleLane:
+    default: false
+  showNaviLane:
+    default: false
+  showOtherLane:
+    default: false
+  showPredictionMinor:
+    default: true
+    menuId: predictionMinor
+  showEllipse:
+    default: false
+    menuId: showEllipse
+  showGaussianInfo:
+    default: false
+    menuId: predictionGaussianInfo
+  showPredictionPriority:
+    default: false
+    menuId: predictionPriority
+  showPredictionInteractiveTag:
+    default: false
+    menuId: predictionInteractiveTag
+  showPredictionDecision:
+    default: true
+    menuId: predictionDecision
+  showPointCloud:
+    default: false
+    menuId: perceptionPointCloud
+  showPerceptionObjectTopic:
+    default: false
+    menuId: perceptionObjectTopic
+  showPerceptionTypeStaticUnkonwn:
+    default: false
+    menuId: perceptionTypeStaticUnkonwn
+  showPerceptionLaneMarker:
+    default: false
+    menuId: perceptionLaneMarker
+  showObstacleStatus:
+    default: false
+    menuId: obstacleStatus
+  showGoalLaneInJunction:
+    default: false
+    menuId: goalLaneInJunction
+  showAdcLocalizationQuality:
+    default: false
+    menuId: localizationQuality
+  showObstaclesVehicle:
+    default: true
+    menuId: perceptionVehicle
+  showObstaclesPedestrian:
+    default: true
+    menuId: perceptionPedestrian
+  showObstaclesBicycle:
+    default: true
+    menuId: perceptionBicycle
+  showObstaclesUnknownMovable:
+    default: true
+    menuId: perceptionUnknownMovable
+  showObstaclesUnknownUnmovable:
+    default: true
+    menuId: perceptionUnknownUnmovable
+  showObstaclesUnknown:
+    default: true
+    menuId: perceptionUnknown
+  showObstaclesVirtual:
+    default: false
+    menuId: perceptionVirtual
+  showObstaclesCipv:
+    default: true
+    menuId: perceptionCipv
+  showObstaclesVelocity:
+    default: true
+    menuId: perceptionVelocity
+  showObstaclesHeading:
+    default: true
+    menuId: perceptionHeading
+  showObstaclesId:
+    default: true
+    menuId: perceptionId
+  showObstaclesInfo:
+    default: true
+    menuId: perceptionObstacleInfo
+  showObstaclesLidarSensor:
+    default: false
+    menuId: perceptionLidarSensor
+  showObstaclesRadarSensor:
+    default: false
+    menuId: perceptionRadarSensor
+  showObstaclesCameraSensor:
+    default: false
+    menuId: perceptionCameraSensor
+  showObstaclesV2xInfo:
+    default: false
+    menuId: perceptionV2xInfo
+  showObstaclesPostFusionObject:
+    default: true
+    menuId: showObstaclesPostFusionObject
+  showObstaclesBevObject:
+    default: false
+    menuId: showObstaclesBevObject
+  showObstaclesPvFmNarrowObject:
+    default: false
+    menuId: showObstaclesPvFmNarrowObject
+  showObstaclesPvFmWideObject:
+    default: false
+    menuId: showObstaclesPvFmWideObject
+  showObstaclesPvLbPinholeObject:
+    default: false
+    menuId: showObstaclesPvLbPinholeObject
+  showObstaclesPvRbPinholeObject:
+    default: false
+    menuId: showObstaclesPvRbPinholeObject
+  showObstaclesPvFmFisheyeObject:
+    default: false
+    menuId: showObstaclesPvFmFisheyeObject
+  showObstaclesPvLmFisheyeObject:
+    default: false
+    menuId: showObstaclesPvLmFisheyeObject
+  showObstaclesPvRmFisheyeObject:
+    default: false
+    menuId: showObstaclesPvRmFisheyeObject
+  showObstaclesPvBmFisheyeObject:
+    default: false
+    menuId: showObstaclesPvBmFisheyeObject
+  showObstaclesBevPostObject:
+    default: false
+    menuId: showObstaclesBevPostObject
+  showObstaclesPvPostFmNarrowObject:
+    default: false
+    menuId: showObstaclesPvPostFmNarrowObject
+  showObstaclesPvPostFmWideObject:
+    default: false
+    menuId: showObstaclesPvPostFmWideObject
+  showObstaclesPvPostLbPinholeObject:
+    default: false
+    menuId: showObstaclesPvPostLbPinholeObject
+  showObstaclesPvPostRbPinholeObject:
+    default: false
+    menuId: showObstaclesPvPostRbPinholeObject
+  showObstaclesPvPostRfPinholeObject:
+    default: false
+    menuId: showObstaclesPvPostRfPinholeObject
+  showObstaclesPvPostLfPinholeObject:
+    default: false
+    menuId: showObstaclesPvPostLfPinholeObject
+  showObstaclesPvRfPinholeObject:
+    default: false
+    menuId: showObstaclesPvRfPinholeObject
+  showObstaclesPvLfPinholeObject:
+    default: false
+    menuId: showObstaclesPvLfPinholeObject
+  showObstaclesOccupancyObject:
+    default: false
+    menuId: showObstaclesOccupancyObject
+  showPositionGps:
+    default: false
+    menuId: positionGps
+  showPositionLocalization:
+    default: true
+    menuId: positionLocalization
+  showVirtualChassis:
+    default: false
+    menuId: virtualChassis
+  showPositionCloseLoop:
+    default: true
+    menuId: positionCloseLoop
+  showPositionShadow:
+    default: false
+    menuId: positionShadow
+  showMapCrosswalk:
+    default: true
+    menuId: mapCrosswalk
+  showMapClearArea:
+    default: true
+    menuId: mapClearArea
+  showMapJunction:
+    default: false
+    menuId: mapJunction
+  showMapPncJunction:
+    default: false
+    menuId: mapPncJunction
+  showMapLane:
+    default: true
+    menuId: mapLane
+  showMapCenterLane:
+    default: false
+    menuId: mapCenterLane
+  showMapRoad:
+    default: false
+    menuId: mapRoad
+  showMapSignal:
+    default: true
+    menuId: mapSignal
+  showMapStopSign:
+    default: true
+    menuId: mapStopSign
+  showMapYield:
+    default: true
+    menuId: mapYield
+  showMapSpeedBump:
+    default: true
+    menuId: mapSpeedBump
+  showMapParkingSpace:
+    default: true
+    menuId: mapParkingSpace
+  showMapLaneId:
+    default: false
+    menuId: mapLaneId
+  showDefaultRoutingInput:
+    default: false
+  showCycleNumberInput:
+    default: false
+
+
+  selectPNCMonitorTab:
+    default: 0
+  showPNCPlanningPanel:
+    default: false
+  showPNCPlanningCore:
+    default: true
+  showPNCPlanningBoundary:
+    default: true
+  showPNCPlanningBuffer:
+    default: false
+  showPNCControlPanel:
+    default: false
+  showPlanningStatusPanel:
+    default: true
+  showOperator:
+    default: false
+  showSideBar:
+    default: false
+  showTools:
+    default: false
+  showTimestamp:
+    default: true
+  cameraDraggable:
+    default: true
+  showPncDebug:
+    default: false
+    menuId: showPncDebug
+  showLonBehavior:
+    default: false
+    menuId: showLonBehavior
+
+
+  showSpeedHeuristic:
+    default: true
+  showPlanningSTGraph:
+    default: true
+  showPlanningVTGraph:
+    default: true
+  showPlanningSpeed:
+    default: true
+  showPlanningAcceleration:
+    default: true
+  showPlanningTheta:
+    default: true
+  showPlanningKappa:
+    default: true
+  showPlanningKappaDerivative:
+    default: true
+  showReferenceLineTheta:
+    default: true
+  showReferenceLineKappa:
+    default: true
+  showReferenceLineKappaDerivative:
+    default: true
+
+
+  showControlTrajectory:
+    default: true
+  showControlSpeed:
+    default: true
+  showControlAcceleration:
+    default: true
+  showControlCurvature:
+    default: true
+  showControlStationError:
+    default: true
+  showControlLateralError:
+    default: true
+  showControlHeadingError:
+    default: true
+
+  
+  showLatencyGraph:
+    default: true
+  showInteractColor:
+    default: false
+
+routingEditor:
+  radiusOfMapRequest: 2000.0 # meters
+
+navigation:
+  # possible options: BaiduMap or GoogleMap
+  map: "BaiduMap"
+
+  # Google Map API: "https://maps.google.com/maps/api/js"
+  # Baidu Map API: "https://api.map.baidu.com/api?v=3.0&ak=0kKZnWWhXEPfzIkklmzAa3dZ&callback=initMap"
+  mapAPiUrl: "https://api.map.baidu.com/api?v=3.0&ak=0kKZnWWhXEPfzIkklmzAa3dZ&callback=initMap"
+
+debug:
+  # Turn this on for monitor related debugging
+  autoMonitorMessage: false
+  performanceMonitor: false
+server:
+  port: 8888

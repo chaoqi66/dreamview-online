@@ -1,0 +1,64 @@
+{
+  "nested": {
+    "apollo": {
+      "nested": {
+        "dreamview": {
+          "nested": {
+            "DreamViewChassis": {
+              "fields": {
+                "speed": {
+                  "type": "float",
+                  "id": 1
+                },
+                "acceleration": {
+                  "type": "float",
+                  "id": 2
+                },
+                "steeringAngle": {
+                  "type": "float",
+                  "id": 3
+                }
+              }
+            },
+            "DreamViewCorrection": {
+              "fields": {
+                "correctionType": {
+                  "type": "CorrectionType",
+                  "id": 1
+                },
+                "quickBrake": {
+                  "type": "bool",
+                  "id": 2
+                }
+              },
+              "nested": {
+                "CorrectionType": {
+                  "values": {
+                    "COMPLETE_AUTO": 0,
+                    "COMPLETE_MANUAL": 1,
+                    "LAT_CORRECTION": 2,
+                    "LON_CORRECTION": 3
+                  }
+                }
+              }
+            },
+            "History": {
+              "fields": {
+                "chassis": {
+                  "keyType": "uint64",
+                  "type": "DreamViewChassis",
+                  "id": 1
+                },
+                "correction": {
+                  "keyType": "uint64",
+                  "type": "DreamViewCorrection",
+                  "id": 2
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
